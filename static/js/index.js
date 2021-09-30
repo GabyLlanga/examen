@@ -17,11 +17,6 @@ function LED1_Off(){
     	client.send(message);
 	//document.getElementById("sensor").innerHTML="led off";
 }
-
-
-  
-
-
 // Create a client instance
   //client = new Paho.MQTT.Client("postman.cloudmqtt.com", 14970);
   
