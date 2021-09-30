@@ -46,8 +46,8 @@ function LED1_Off(){
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
 	
-    client.subscribe("gabyllanga-15@outlook.com/t1");
-    message = new Paho.MQTT.Message("hola desde la web");
+    client.subscribe("gabyllanga-15@outlook.com/t2");
+    message = new Paho.MQTT.Message("hola");
     message.destinationName = "gabyllanga-15@outlook.com/t1";
     client.send(message);
 	
@@ -68,6 +68,11 @@ function LED1_Off(){
   // called when a message arrives
   function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
-	  document.getElementById("sensor").innerHTML=message.payloadString;
+	 // document.getElementById("sensor").innerHTML=message.payloadString;
+	  var hola = message.payloadString.split("-");
+	  document.getElementById("sensor").innerHTML=hola[0];
+	  document.getElementById("sensor1").innerHTML=hola[1];
+	  
+	
   }
 
