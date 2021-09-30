@@ -19,8 +19,8 @@ function LED1_On() {
     sensorDoc.close()
 	//alert("led on");
 	console.log("led on");
-	document.getElementById("sensor").innerHTML=leerSensor1;
-  document.getElementById("sensor").innerHTML=leerSensor2;
+	document.getElementById("sensor1").innerHTML=leerSensor1;
+  document.getElementById("sensor2").innerHTML=leerSensor2;
 	message = new Paho.MQTT.Message("ON");
     	message.destinationName = "gabyllanga-15@outlook.com/t1";
     	client.send(message);
