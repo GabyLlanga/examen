@@ -10,13 +10,6 @@ function LED1_On() {
     def leerSensor2():
     return random.randint(100,125)
     sensorDoc=open('valorsensor.txt','w')
-    for i in range(10):
-    time.sleep(3)
-    print(i)
-    valor1=leerSensor1()
-    valor2=leerSensor2()
-    sensorDoc.write(str(i)+':'+str(valor1)+';'+str(valor2))
-    sensorDoc.close()
 	//alert("led on");
 	console.log("led on");
 	document.getElementById("sensor1").innerHTML=leerSensor1;
@@ -24,7 +17,6 @@ function LED1_On() {
 	message = new Paho.MQTT.Message("ON");
     	message.destinationName = "gabyllanga-15@outlook.com/t1";
     	client.send(message);
-  
 }
 function LED1_Off(){	
 	//alert("led off");
