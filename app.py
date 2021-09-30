@@ -4,6 +4,8 @@ from flask import Flask, render_template, request
 #import model
 import json
 import base64
+import random
+import time
 from urllib.parse import unquote
 
 import os
